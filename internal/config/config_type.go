@@ -9,14 +9,32 @@ type Config struct {
 	APIDocAuth APIAuthConfig
 }
 
-type ServerConfig struct {}
+type ServerConfig struct{}
 
-type PostgresConfig struct {}
+type PostgresConfig struct{}
 
-type RedisConfig struct {}
+type RedisConfig struct{}
 
-type LoggerConfig struct {}
+type LogFormat string
+type LogLevel string
 
-type TokenConfig struct {}
+const (
+	// Format
+	LogFormatJSON LogFormat = "json"
+	LogFormatText LogFormat = "text"
 
-type APIAuthConfig struct {}
+	// Level
+	LogLevelInfo  LogLevel = "info"
+	LogLevelDebug LogLevel = "debug"
+	LogLevelWarn  LogLevel = "warn"
+	LogLevelError LogLevel = "error"
+)
+
+type LoggerConfig struct {
+	Format LogFormat
+	Level  LogLevel
+}
+
+type TokenConfig struct{}
+
+type APIAuthConfig struct{}
