@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/allenliao0119/go-clean-project/internal/config"
+	"github.com/allenliao0119/go-auth-service/internal/config"
 )
 
 type slogger struct {

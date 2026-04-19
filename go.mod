@@ -1,4 +1,4 @@
-module github.com/allenliao0119/go-clean-project
+module github.com/allenliao0119/go-auth-service
 
 go 1.25.5
 
