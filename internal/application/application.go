@@ -8,6 +8,7 @@ import (
 type Application struct {
 	Config *config.Config
 	Logger logger.Logger
+	Service *Service
 	UseCase *UseCase
 }
 
@@ -17,6 +18,7 @@ func New(cfg *config.Config) (*Application, error) {
 	app := &Application{
 		Config: cfg,
 		Logger: logger,
+		Service: NewService(),
 	}
 
 	app.UseCase = NewUseCase(app)
