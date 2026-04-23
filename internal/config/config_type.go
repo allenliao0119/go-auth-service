@@ -9,7 +9,9 @@ type Config struct {
 	APIDocAuth APIAuthConfig
 }
 
-type ServerConfig struct{}
+type ServerConfig struct {
+	Port string
+}
 
 type PostgresConfig struct{}
 
